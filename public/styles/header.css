@@ -1,13 +1,11 @@
 header {
-  background-color: rgb(201, 243, 253);
-  background-image: url("https://www.transparenttextures.com/patterns/hexellence.png");
-  height: 400px;
-  width: 100%;
-}
-
-.header-box {
+  padding-top: 120px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: rgb(201, 243, 253);
+  background-image: url("https://www.transparenttextures.com/patterns/hexellence.png");
+  height: 400px;
+  width: 100%;
 }
