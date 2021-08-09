@@ -1,0 +1,32 @@
+.new-tweet{
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.new-tweet, ::placeholder {
+  color: #545149;
+  font-weight: 600;
+}
+
+#tweet-text {
+  color: #545149;
+  font-weight: 600;
+  background-color: transparent;
+  border: none;
+  border-bottom: 4px #545149 solid;
+  resize: none;
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+#tweetButton {
+  background-color: #4056A1;
+  color: #FFFFFF;
+}
+
+.new-tweet-box {
+  font-family: 'Bungee', cursive;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+}
