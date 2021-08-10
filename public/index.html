@@ -21,6 +21,7 @@
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/6c80064a05.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
@@ -51,7 +52,6 @@
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form action="/tweets/" method="POST">
-          <!-- <label for="tweet-text">What are you humming about?</label> -->
           <textarea name="text" id="tweet-text" rows="1" placeholder="What are you prattling on about?"></textarea>
           <div class="new-tweet-box">
             <button type="submit" id="tweetButton">Tweet</button>
@@ -60,26 +60,7 @@
         </form>
       </section>
       <section id="tweets-container">
-        <article class="tweet">
-          <header>
-            <div class="tweet-profile">
-              <img src="images/profile-hex.png" alt="" width="75px" height="75px">
-              <h4>Howie</h4>
-            </div>
-            <h5>@howieDanger</h5>
-          </header>
-          <p class="content">Coming full circle, the internet's remixing of the now infamous lorem ipsum passage has officially elevated it to pop culture status.</p>
-          <footer>
-            <div class="footer-box">
-              <p>10 days ago</p>
-              <div class="icon-box">
-                <i class="fas fa-solid fa-flag"></i>
-                <i class="fas fa-solid fa-retweet"></i>
-                <i class="fas fa-solid fa-heart"></i>
-            </div>
-            </div>
-          </footer>
-        </article>
+<!-- Tweets go here -->
       </section>
     </main>
   </body>
