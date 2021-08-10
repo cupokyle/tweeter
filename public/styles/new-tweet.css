@@ -30,3 +30,40 @@
   justify-content: space-between;
   padding-top: 10px;
 }
+
+.tweet {
+  margin-top: 25px;
+  border: 4px #545149 solid;
+}
+
+.tweet-header {
+  font-size: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 20px;
+}
+
+.tweetProf {
+  display: flex;
+  align-items: center;
+}
+
+.profImg {
+  margin-right: 10px;
+}
+
+.userTag {
+  color: slategray;
+}
+
+.content {
+  font-size: 0.9em;
+  margin: 5%;
+  font-weight: 600;
+}
+
+.tweet-footer {
+border: rgb(87, 8, 63) dotted 2px;
+}
