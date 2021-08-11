@@ -8,6 +8,7 @@
 $(document).ready(function() {
   // Event Listener to listen for tweet submis
   $(".error-message").hide();
+  $("#tweet-form").hide();
   $(document).on("submit", function(event){
     event.preventDefault();
     if ($("#tweet-text").val() === "" || $("#tweet-text").val() === null){
@@ -46,6 +47,9 @@ $(document).ready(function() {
     }
     });
   }
+  $("#tweetButton").on("click", () => {
+    $("#tweet-form").slideToggle("fast");
+  })
   // Call loadTweets which in turn grabs tweets and calls renderTweets on them.
   loadTweets();
 });

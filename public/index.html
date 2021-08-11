@@ -32,9 +32,10 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span class="tweeterLogo">tweeter</span>
-      <div id="tweetButton">
-      <span><b>Write</b> a new tweet</span><i class="fas fa-angle-double-down"></i>
-    </div>
+      <button id="tweetButton">
+      <span><b>Write</b> a new tweet</span>
+      <i class="fas fa-angle-double-down"></i>
+    </button>
     </nav>
     <header id="page-header">
 
@@ -50,7 +51,7 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <form action="/tweets/" method="POST">
+        <form action="/tweets/" method="POST" id="tweet-form">
           <p class="error-message">
             <!-- error message goes here -->
           </p>
