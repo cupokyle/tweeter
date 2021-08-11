@@ -1,47 +1,46 @@
-// Fake data taken from initial-tweets.json
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-]
-
 /*
  * Client-side JS logic goes here
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
 */
+
 $(document).ready(function() {
-
-  renderTweets(data);
-  // const $tweet = createTweetElement(tweetData);
-  // $("#tweets-container").prepend($tweet); 
+  // Event Listener to listen for tweet submissions
+  $(document).on("submit", function(event){
+    event.preventDefault();
+    if ($("#tweet-text").val() === "" || $("#tweet-text").val() === null){
+      alert("Tweets should never be blank!")
+    } else if ($("#tweet-text").val().length > 140) {
+      alert("You've entered too many characters!")
+    } else {
+    const $formData = $("#tweet-text").serialize();
+    $("#tweet-text").val('');
+    $.post({
+      url: "tweets",
+      data: $formData
+    })
+      .done(function() {
+        console.log("Successful Tweet!")
+        // This is me trying to make tweets update in real time
+        // $("#tweet-text").empty()
+        // loadTweets();
+      });
+    }
+  })
+  // GET request to grab tweets
+  const loadTweets = function() {
+    $.get({
+      url: "/tweets",
+      dataType: "json",
+      data: "data",
+      success: function(data){
+        renderTweets(data);
+    }
+    });
+  }
+  // Call loadTweets which in turn grabs tweets and calls renderTweets on them.
+  loadTweets();
 });
-
-
-// Test / driver code (temporary)
-// console.log($tweet); // to see what it looks like
-
-
-  // to add it to the page so we can make sure it's got all the right elements, classes, etc.
 
 const createTweetElement = function(tweetObj) {
   const userName = tweetObj.user.name;
@@ -74,10 +73,7 @@ const createTweetElement = function(tweetObj) {
 
 const renderTweets = function(tweetsArray) {
   tweetsArray.forEach(tweet => {
-    console.log(tweet);
     const $thisNewTweet = createTweetElement(tweet);
-    $("#tweets-container").append($thisNewTweet);
+    $("#tweets-container").prepend($thisNewTweet);
   });
 };
-
-renderTweets(data);
