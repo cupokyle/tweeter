@@ -45,7 +45,7 @@ const createTweetElement = function(tweetObj) {
   const userName = tweetObj.user.name;
   const userAvatars = tweetObj.user.avatars;
   const userHandle = tweetObj.user.handle;
-  const contentText = tweetObj.content.text;
+  const contentText = escape(tweetObj.content.text);
   const createTime = tweetObj.created_at;
   const $html = `<article class="tweet">
   <header>
@@ -55,7 +55,7 @@ const createTweetElement = function(tweetObj) {
       </div>
       <h5>${userHandle}</h5>
   </header>
-  <p class="content">${escape(contentText)}</p>
+  <p class="content">${contentText}</p>
   <footer>
   <div class="footer-box">
       <p>${timeago.format(createTime)}</p>
