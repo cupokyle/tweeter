@@ -55,7 +55,7 @@ const createTweetElement = function(tweetObj) {
       </div>
       <h5>${userHandle}</h5>
   </header>
-  <p class="content">${contentText}</p>
+  <p class="content">${escape(contentText)}</p>
   <footer>
   <div class="footer-box">
       <p>${timeago.format(createTime)}</p>
@@ -70,10 +70,20 @@ const createTweetElement = function(tweetObj) {
       return $html;
 };
 
+//Empties tweet container and then renders all tweets
+
 const renderTweets = function(tweetsArray) {
   $("#tweets-container").empty();
   tweetsArray.forEach(tweet => {
     const $thisNewTweet = createTweetElement(tweet);
     $("#tweets-container").prepend($thisNewTweet);
   });
+};
+
+// Escape function for Cross-Site Scripting
+
+const escape = function (str) {
+  let div = document.createElement("p");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
 };
