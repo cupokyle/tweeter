@@ -31,8 +31,6 @@ $(document).ready(function() {
       data: $formData
     })
       .done(function() {
-        console.log("Successful Tweet!")
-        // This is me trying to make tweets update in real time
         loadTweets();
       });
     }
@@ -61,7 +59,7 @@ const createTweetElement = function(tweetObj) {
   const $html = `<article class="tweet">
   <header>
   <div class="tweet-profile">
-      <img src="${userAvatars}" alt="" width="75px" height="75px">
+      <img src="${userAvatars}" alt="" width="60px" height="60px">
       <h4>${userName}</h4>
       </div>
       <h5>${userHandle}</h5>

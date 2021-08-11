@@ -66,11 +66,13 @@
 }
 
 .tweet-profile img {
+  margin-left: 10px;
   margin-right: 10px;
 }
 
 .tweet h5 {
   color: slategray;
+  margin-right: 20px;
 }
 
 /* Tweet Content */
