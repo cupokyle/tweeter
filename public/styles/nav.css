@@ -16,14 +16,25 @@ nav span {
  }
 
 nav i {
-  color: #cc0033;
+  color: #ffe600;
 }
 
-.tweeterLogo {
+.tweeterLogo a {
   font-family: 'Bungee', cursive;
+  text-decoration: none;
+  color: white;
+}
+.tweeterLogo a:hover {
+  font-family: 'Bungee', cursive;
+  font-weight: bolder;
+  cursor: pointer;
+  color: white;
 }
 
 #tweetButton {
+  height: 50px;
+  text-align: center;
+  margin-right: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -100,3 +100,8 @@ const escape = function (str) {
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
+
+setInterval(() => {
+  $(".fa-angle-double-down").slideToggle("slow")
+}, 1500)
+
