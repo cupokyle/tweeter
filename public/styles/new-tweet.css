@@ -26,9 +26,10 @@
   caret-color: #4056A1;
 }
 
-#tweetButton {
+#newTweetButton {
   background-color: #4056A1;
   color: #FFFFFF;
+  cursor: pointer;
 }
 
 .new-tweet-box {

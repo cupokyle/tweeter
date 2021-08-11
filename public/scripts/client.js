@@ -49,6 +49,7 @@ $(document).ready(function() {
   }
   $("#tweetButton").on("click", () => {
     $("#tweet-form").slideToggle("fast");
+    $("#tweet-text").val('');
   })
   // Call loadTweets which in turn grabs tweets and calls renderTweets on them.
   loadTweets();
