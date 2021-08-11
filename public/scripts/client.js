@@ -4,15 +4,26 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
 */
 
+
 $(document).ready(function() {
-  // Event Listener to listen for tweet submissions
+  // Event Listener to listen for tweet submis
+  $(".error-message").hide();
   $(document).on("submit", function(event){
     event.preventDefault();
     if ($("#tweet-text").val() === "" || $("#tweet-text").val() === null){
-      alert("Tweets should never be blank!")
+      $(".error-message")
+      .html("<i class='fas fa-skull-crossbones'></i> There's no such thing as an empty tweet! <i class='fas fa-skull-crossbones'></i>")
+      .slideDown("fast")
+      .delay(1500)
+      .slideUp("fast");
     } else if ($("#tweet-text").val().length > 140) {
-      alert("You've entered too many characters!")
+      $(".error-message")
+      .html("<i class='fas fa-skull-crossbones'></i> You've gone a bit overboard! <i class='fas fa-skull-crossbones'></i>")
+      .slideDown("fast")
+      .delay(1500)
+      .slideUp("fast");
     } else {
+      $(".error-message").slideUp("fast");
     const $formData = $("#tweet-text").serialize();
     $("#tweet-text").val('');
     $.post({

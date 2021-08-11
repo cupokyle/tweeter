@@ -50,8 +50,10 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
         <form action="/tweets/" method="POST">
+          <p class="error-message">
+            <!-- error message goes here -->
+          </p>
           <textarea name="text" id="tweet-text" rows="1" placeholder="What are you prattling on about?"></textarea>
           <div class="new-tweet-box">
             <button type="submit" id="tweetButton">Tweet</button>
