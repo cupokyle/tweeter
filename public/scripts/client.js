@@ -22,8 +22,7 @@ $(document).ready(function() {
       .done(function() {
         console.log("Successful Tweet!")
         // This is me trying to make tweets update in real time
-        // $("#tweet-text").empty()
-        // loadTweets();
+        loadTweets();
       });
     }
   })
@@ -72,6 +71,7 @@ const createTweetElement = function(tweetObj) {
 };
 
 const renderTweets = function(tweetsArray) {
+  $("#tweets-container").empty();
   tweetsArray.forEach(tweet => {
     const $thisNewTweet = createTweetElement(tweet);
     $("#tweets-container").prepend($thisNewTweet);
