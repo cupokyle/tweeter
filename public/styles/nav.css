@@ -1,3 +1,4 @@
+/* Default Nav Styles */
 nav {
   display: flex;
   position: fixed;
@@ -15,8 +16,8 @@ nav span {
   margin-right: 1.5em;
  }
 
+  /* For Arrow Animation */
  @keyframes bounce { 0% { transform: translateY(0); } 100% { transform: translateY(-25px); } }
-
 
 nav i {
   color: #ffe600;
@@ -34,6 +35,7 @@ nav i {
   color: white;
   z-index: 3;
 }
+
 .tweeterLogo a:hover {
   font-family: 'Bungee', cursive;
   font-style: italic;
@@ -51,6 +53,7 @@ nav i {
   align-items: center;
   border: none;
 }
+
 #tweetButton:hover {
   font-style: italic;
   cursor: pointer;
@@ -58,40 +61,49 @@ nav i {
 
 /* Tablet style */
 @media only screen and (max-width: 1024px){
+
   nav {
     background: transparent;
   }
+
   #tweetButton {
     margin-top: 20px;
     background: transparent;
     color: #4056A1;
     font-weight: bold;
   }
+
   .tweeterLogo a {
     color: #4056A1;
   }
+
     nav i {
     color: #545149;
   }
+
 }
 
 
  /* Phone Style */
-
 @media only screen and (max-width: 767px){
+
   nav {
     flex-direction: column;
     height: 150px;
     align-items: center;
   }
+
   nav button {
     margin-left: 10px;
     margin-bottom: 20px;
   }
+
   .tweeterLogo {
     margin-top: 15px;
   }
+
   nav i {
     color: #545149;
   }
+  
 }

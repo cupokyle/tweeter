@@ -14,23 +14,25 @@ $(document).ready(function() {
   });
   // ToTop functionality
   $('#toTop').on("click", function() {
+    // When clicked, scrolls to top of page
       $("#tweet-form").slideDown("fast");
         window.scroll({
         top: 0, 
         left: 0, 
         behavior: 'smooth' 
        })
+       // If tweetform is not visible, toggle it so that it is.
        if (!$('#tweet-form').is(":visible")){
        $("#tweet-form").slideToggle("fast");
        }   
   }); 
-  // Animates little arrow icon
+  // Animates little arrow icon on "Compose button"
   setInterval(() => {
     $(".arrow").animate({})
   }, 1500);
 });
 
-// Function that automatically grows textarea
+// This helper function automatically grows textarea as user types:
 
 $(function() {
   $('#tweet-text').on('input keyup paste', function() {

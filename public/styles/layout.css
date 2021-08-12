@@ -3,16 +3,16 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+ /*
+  * Global layout stuff
+  */
+
 html {
   box-sizing: border-box;
 }
 *, *:before, *:after {
   box-sizing: inherit;
 }
-
-/*
- * Global layout stuff
- */
 
 body {
   color: #545149;
@@ -27,6 +27,7 @@ body {
 
  /* Mobile Style */
  @media only screen and (max-width: 767px){
+
  main {
   margin: 0 auto;
    width : 90%;
@@ -50,10 +51,12 @@ body {
  #page-footer {
 height: 30px;
  }
+
 }
 
  /* Tablet Style */
  @media only screen and (min-width: 768px){
+
  main {
   margin: 0 auto;
    width : 90%;
@@ -76,12 +79,11 @@ height: 30px;
 
  #page-footer {
   height: 30px;
-   }
+  }
 
 }
 
  /* Large Screen Style */
-
  @media only screen and (min-width: 1025px) {
 
   #response-box {
@@ -90,9 +92,11 @@ height: 30px;
     justify-content: space-between;
     margin: 120px auto;
   }
+
   main {
     width: 55%;
   }
+  
   #toTop {
     position: fixed;
     bottom: 60px;

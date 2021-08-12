@@ -1,3 +1,7 @@
+/* Default New Tweet Form & Tweets Styling */
+
+/* New Tweet Form Styling */
+
 .new-tweet{
   margin: 20px auto;
   padding: 15px;
@@ -117,12 +121,14 @@ margin-right: 20px;
   padding: 5px;
   color: #4056A1;
 }
+
 .tweet i:hover {
   color: #545149;
   cursor: pointer;
 }
 
 /* Error Styling */
+
 .error-message {
   color: #cc0033;
   display: inline-block;
@@ -147,24 +153,29 @@ margin-right: 20px;
 }
 
  /* Mobile styling */
-
  @media only screen and (max-width: 767px) {
+
   .tweet header{
     font-size: 0.8em;
   }
+
   .tweet-profile img {
     height: 1.2em;
     width: 1.2em;
     position: relative;
     bottom: 40px;
   }
+
   .tweet i {
     padding-left: 10px;
   }
+
   #tweet-text {
     font-size: medium;
   }
+
   .error-message {
     font-size: 12px;
   }
+  
 }

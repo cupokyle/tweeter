@@ -5,44 +5,57 @@
 */
 
 $(document).ready(function() {
-  // Event Listener to listen for tweet submission
+
+  // When the page loads I want my form and message elements completely hidden
   $(".error-message").hide();
   $("#tweet-form").hide();
   $(".tweet-message").hide();
+  
+  // Event Listener to listen for tweet submission
   $(document).on("submit", function(event){
     event.preventDefault();
+    // If textarea is empty, display error message
     if ($("#tweet-text").val() === "" || $("#tweet-text").val() === null){
       $(".error-message")
       .html("<i class='fas fa-skull-crossbones'></i> THERE'S NO SUCH THING AS AN EMPTY TWEET! <i class='fas fa-skull-crossbones'></i>")
       .slideDown("fast")
       .delay(1500)
       .slideUp("fast");
+
+    // If character limit is surpassed, display error message
     } else if ($("#tweet-text").val().length > 140) {
       $(".error-message")
       .html("<i class='fas fa-skull-crossbones'></i> YOU'VE GONE A BIT OVERBOARD! <i class='fas fa-skull-crossbones'></i>")
       .slideDown("fast")
       .delay(1500)
       .slideUp("fast");
+
+    // If tweet submission is good, display success message
     } else {
       $(".tweet-message")
       .html("<i class='fas fa-paper-plane'></i> TWEET SENT! <i class='fas fa-paper-plane'></i>")
       .slideDown("fast")
       .delay(1500)
       .slideUp("fast");
+      // Reset charcounter to 140
       $(".counter").html(140);
-      $(".error-message").slideUp("fast");
     const $formData = $("#tweet-text").serialize();
+    // Reset textarea to default state
     $("#tweet-text").val('');
     $("#tweet-text").attr("style", "");
+    // Make a POST request with the tweet information
     $.post({
       url: "tweets",
       data: $formData
     })
       .done(function() {
+
+        // Then reload the tweets
         loadTweets();
       });
     }
   })
+
   // GET request to grab tweets
   const loadTweets = function() {
     $.get({
@@ -54,9 +67,12 @@ $(document).ready(function() {
     }
     });
   }
+  // When the new Tweet button is clicked
+  // Empty the textarea and toggle it open or closed.
   $("#tweetButton").on("click", () => {
     $("#tweet-form").slideToggle("fast");
     $("#tweet-text").val('');
+    // If it toggles open, focus cursor inside
     if ($('#tweet-form').is(":visible")){
       $("#tweet-text").focus();
       } 
@@ -65,6 +81,7 @@ $(document).ready(function() {
   loadTweets();
 });
 
+// Creates tweet elements to pass to my HTML
 const createTweetElement = function(tweetObj) {
   const userName = tweetObj.user.name;
   const userAvatars = tweetObj.user.avatars;
@@ -95,7 +112,6 @@ const createTweetElement = function(tweetObj) {
 };
 
 //Empties tweet container and then renders all tweets
-
 const renderTweets = function(tweetsArray) {
   $("#tweets-container").empty();
   tweetsArray.forEach(tweet => {
@@ -105,7 +121,6 @@ const renderTweets = function(tweetsArray) {
 };
 
 // Escape function for Cross-Site Scripting
-
 const escape = function (str) {
   let div = document.createElement("p");
   div.appendChild(document.createTextNode(str));
