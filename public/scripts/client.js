@@ -8,6 +8,7 @@ $(document).ready(function() {
   // Event Listener to listen for tweet submission
   $(".error-message").hide();
   $("#tweet-form").hide();
+  $(".tweet-message").hide();
   $(document).on("submit", function(event){
     event.preventDefault();
     if ($("#tweet-text").val() === "" || $("#tweet-text").val() === null){
@@ -32,6 +33,7 @@ $(document).ready(function() {
       $(".error-message").slideUp("fast");
     const $formData = $("#tweet-text").serialize();
     $("#tweet-text").val('');
+    $("#tweet-text").attr("style", "");
     $.post({
       url: "tweets",
       data: $formData

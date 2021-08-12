@@ -46,7 +46,7 @@
 
  /* Desktop Header Style */
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1025px) {
   #page-header {
     width: 33.3%;
     margin-left: 50px;

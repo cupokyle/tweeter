@@ -48,7 +48,7 @@ body {
  }
 
  #page-footer {
-height: 0;
+height: 30px;
  }
 }
 
@@ -75,13 +75,14 @@ height: 0;
  }
 
  #page-footer {
-height: 0;
- }
+  height: 30px;
+   }
+
 }
 
  /* Large Screen Style */
 
- @media only screen and (min-width: 1024px) {
+ @media only screen and (min-width: 1025px) {
 
   #response-box {
     padding: 50px;
