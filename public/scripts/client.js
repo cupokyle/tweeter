@@ -12,17 +12,22 @@ $(document).ready(function() {
     event.preventDefault();
     if ($("#tweet-text").val() === "" || $("#tweet-text").val() === null){
       $(".error-message")
-      .html("<i class='fas fa-skull-crossbones'></i> There's no such thing as an empty tweet! <i class='fas fa-skull-crossbones'></i>")
+      .html("<i class='fas fa-skull-crossbones'></i> THERE'S NO SUCH THING AS AN EMPTY TWEET! <i class='fas fa-skull-crossbones'></i>")
       .slideDown("fast")
       .delay(1500)
       .slideUp("fast");
     } else if ($("#tweet-text").val().length > 140) {
       $(".error-message")
-      .html("<i class='fas fa-skull-crossbones'></i> You've gone a bit overboard! <i class='fas fa-skull-crossbones'></i>")
+      .html("<i class='fas fa-skull-crossbones'></i> YOU'VE GONE A BIT OVERBOARD! <i class='fas fa-skull-crossbones'></i>")
       .slideDown("fast")
       .delay(1500)
       .slideUp("fast");
     } else {
+      $(".tweet-message")
+      .html("<i class='fas fa-paper-plane'></i> TWEET SENT! <i class='fas fa-paper-plane'></i>")
+      .slideDown("fast")
+      .delay(1500)
+      .slideUp("fast");
       $(".counter").html(140);
       $(".error-message").slideUp("fast");
     const $formData = $("#tweet-text").serialize();

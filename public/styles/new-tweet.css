@@ -44,6 +44,8 @@
 .tweet {
   margin-top: 25px;
   border: 4px #545149 solid;
+  border-radius: 20px;
+  background-color: whitesmoke;
 }
 
 .tweet:hover {
@@ -124,4 +126,18 @@ margin-right: 20px;
   margin: 10px 0;
   width: 100%;
   text-align: center;
+    font-style: italic;
+}
+
+.tweet-message {
+  background-color: whitesmoke;
+  color: #4056A1;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 15px;
+  margin: 10px 0;
+  width: 100%;
+  text-align: center;
+  font-style: italic;
+  font-size: large;
 }

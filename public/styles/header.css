@@ -8,4 +8,5 @@
   background-image: url("https://www.transparenttextures.com/patterns/hexellence.png");
   height: 400px;
   width: 100%;
+  border-radius: 0 0 10px 10px;
 }
