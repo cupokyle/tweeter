@@ -6,9 +6,9 @@ $(document).ready(function() {
     if ($(this).scrollTop()) {
         $('#toTop:hidden').stop(true, true).fadeIn();
         // here is where im trying to implement the fading out of the nav bar as you scroll
-        // $('nav').stop(true, true).fadeOut();
+        $('nav').fadeOut("slow");
     } else {
-      // $('nav').stop(true, true).fadeIn();
+      $('nav').fadeIn();
         $('#toTop').stop(true, true).fadeOut();
     }
   });

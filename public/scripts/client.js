@@ -5,7 +5,7 @@
 */
 
 $(document).ready(function() {
-  // Event Listener to listen for tweet submis
+  // Event Listener to listen for tweet submission
   $(".error-message").hide();
   $("#tweet-form").hide();
   $(document).on("submit", function(event){

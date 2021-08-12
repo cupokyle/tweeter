@@ -46,5 +46,6 @@ body {
  }
 
  #page-footer {
-height: 80px;
+   margin-top: 50px;
+height: 60px;
  }
