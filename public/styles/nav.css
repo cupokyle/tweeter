@@ -32,6 +32,7 @@ nav i {
   font-family: 'Bungee', cursive;
   text-decoration: none;
   color: white;
+  z-index: 3;
 }
 .tweeterLogo a:hover {
   font-family: 'Bungee', cursive;
@@ -53,4 +54,44 @@ nav i {
 #tweetButton:hover {
   font-style: italic;
   cursor: pointer;
+}
+
+/* Tablet style */
+@media only screen and (max-width: 1023px){
+  nav {
+    background: transparent;
+  }
+  #tweetButton {
+    margin-top: 20px;
+    background: transparent;
+    color: #4056A1;
+    font-weight: bold;
+  }
+  .tweeterLogo a {
+    color: #4056A1;
+  }
+    nav i {
+    color: #545149;
+  }
+}
+
+
+ /* Phone Style */
+
+@media only screen and (max-width: 600px){
+  nav {
+    flex-direction: column;
+    height: 150px;
+    align-items: center;
+  }
+  nav button {
+    margin-left: 10px;
+    margin-bottom: 20px;
+  }
+  .tweeterLogo {
+    margin-top: 15px;
+  }
+  nav i {
+    color: #545149;
+  }
 }

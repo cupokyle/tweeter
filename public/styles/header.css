@@ -1,3 +1,32 @@
+/* Mobile Style */
+
+@media only screen and (max-width: 600px){
+  #page-header {
+    padding-top: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(201, 243, 253);
+    background-image: url("https://www.transparenttextures.com/patterns/hexellence.png");
+    height: 400px;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+  }
+  header img {
+    margin-top: 75px;
+    height: 165px;
+  }
+  header h2 {
+    padding-bottom: 15px;
+  }
+
+}
+
+/* Tablet Header Style */
+
+@media only screen and (min-width: 601px){
+
 #page-header {
   padding-top: 120px;
   display: flex;
@@ -9,4 +38,25 @@
   height: 400px;
   width: 100%;
   border-radius: 0 0 10px 10px;
+}
+.header-item img {
+  height: 165px;
+}
+}
+
+ /* Desktop Header Style */
+
+@media only screen and (min-width: 1024px) {
+  #page-header {
+    width: 33.3%;
+    margin-left: 50px;
+    border-radius: 25px;
+  }
+  .header-item h2{
+    margin-bottom: 125px;
+  }
+  .header-item img {
+    height: 250px;
+  }
+
 }

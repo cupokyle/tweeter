@@ -17,6 +17,8 @@
   resize: none;
   width: 100%;
   padding-bottom: 10px;
+  min-height: 17px;
+  max-height: 150px;
 }
 
 #tweet-text:focus {
@@ -30,6 +32,7 @@
   background-color: #4056A1;
   color: #FFFFFF;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 .new-tweet-box {
@@ -139,4 +142,27 @@ margin-right: 20px;
   text-align: center;
   font-style: italic;
   font-size: large;
+}
+
+ /* Mobile styling */
+
+ @media only screen and (max-width: 600px) {
+  .tweet header{
+    font-size: 0.8em;
+  }
+  .tweet-profile img {
+    height: 1.2em;
+    width: 1.2em;
+    position: relative;
+    bottom: 40px;
+  }
+  .tweet i {
+    padding-left: 10px;
+  }
+  #tweet-text {
+    font-size: medium;
+  }
+  .error-message {
+    font-size: 12px;
+  }
 }
