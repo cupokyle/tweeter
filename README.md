@@ -29,12 +29,12 @@ I was assigned to build the entire front-end of this application.
 
 ## See it in action:
 
-!["Dashboard"](public/images/thumbs/desk2.png)
+!["Dashboard"](docs/desk2.png)
 
-!["Tablet Dashboard"](public/images/thumbs/tab2.png)
+!["Tablet Dashboard"](docs/tab2.png)
 
-!["Tablet Scrolled Down"](public/images/thumbs/tab3.png)
+!["Tablet Scrolled Down"](docs/tab3.png)
 
-!["Mobile Dashboard"](public/images/thumbs/mob2.png)
+!["Mobile Dashboard"](docs/mob2.png)
 
-!["Mobile Scrolled Down"](public/images/thumbs/mob1.png)
+!["Mobile Scrolled Down"](docs/mob1.png)
