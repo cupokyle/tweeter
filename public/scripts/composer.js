@@ -4,31 +4,31 @@ $(document).ready(function() {
   $('#toTop').hide();
   $(window).scroll(function() {
     if ($(this).scrollTop()) {
-        $('#toTop:hidden').stop(true, true).fadeIn();
-        // here is where im trying to implement the fading out of the nav bar as you scroll
-        $('nav').fadeOut("slow");
+      $('#toTop:hidden').stop(true, true).fadeIn();
+      // here is where im trying to implement the fading out of the nav bar as you scroll
+      $('nav').fadeOut("slow");
     } else {
       $('nav').fadeIn();
-        $('#toTop').stop(true, true).fadeOut();
+      $('#toTop').stop(true, true).fadeOut();
     }
   });
   // ToTop functionality
   $('#toTop').on("click", function() {
     // When clicked, scrolls to top of page
-      $("#tweet-form").slideDown("fast");
-        window.scroll({
-        top: 0, 
-        left: 0, 
-        behavior: 'smooth' 
-       })
-       // If tweetform is not visible, toggle it so that it is.
-       if (!$('#tweet-form').is(":visible")){
-       $("#tweet-form").slideToggle("fast");
-       }   
-  }); 
+    $("#tweet-form").slideDown("fast");
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+    // If tweetform is not visible, toggle it so that it is.
+    if (!$('#tweet-form').is(":visible")) {
+      $("#tweet-form").slideToggle("fast");
+    }
+  });
   // Animates little arrow icon on "Compose button"
   setInterval(() => {
-    $(".arrow").animate({})
+    $(".arrow").animate({});
   }, 1500);
 });
 
@@ -36,8 +36,8 @@ $(document).ready(function() {
 
 $(function() {
   $('#tweet-text').on('input keyup paste', function() {
-    var $el = $(this),
-        offset = $el.innerHeight() - $el.height();
+    let $el = $(this),
+      offset = $el.innerHeight() - $el.height();
 
     if ($el.innerHeight() < this.scrollHeight) {
       // Grow the field if scroll height is smaller
