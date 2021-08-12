@@ -4,7 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
 */
 
-
 $(document).ready(function() {
   // Event Listener to listen for tweet submis
   $(".error-message").hide();
@@ -24,6 +23,7 @@ $(document).ready(function() {
       .delay(1500)
       .slideUp("fast");
     } else {
+      $(".counter").html(140);
       $(".error-message").slideUp("fast");
     const $formData = $("#tweet-text").serialize();
     $("#tweet-text").val('');
@@ -101,8 +101,3 @@ const escape = function (str) {
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
-
-setInterval(() => {
-  $(".fa-angle-double-down").slideToggle("slow")
-}, 1500)
-
