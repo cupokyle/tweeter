@@ -26,6 +26,6 @@ $(document).ready(function() {
   }); 
   // Animates little arrow icon
   setInterval(() => {
-    $(".arrow").slideToggle("slow")
+    $(".arrow").animate({})
   }, 1500);
 });
