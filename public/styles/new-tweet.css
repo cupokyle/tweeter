@@ -156,12 +156,15 @@ margin-right: 20px;
  @media only screen and (max-width: 767px) {
 
   .tweet header{
+    margin-top: 5px;
+    height: 60px;
     font-size: 0.8em;
+    padding-bottom: 1px;
   }
 
   .tweet-profile img {
-    height: 1.2em;
-    width: 1.2em;
+    height: 2em;
+    width: 2em;
     position: relative;
     bottom: 40px;
   }
