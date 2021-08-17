@@ -26,7 +26,7 @@ module.exports = {
       const suffix = Math.round(Math.random() * 100);
       userHandle += suffix;
     }
-   
+ 
     const avatars = {
     
       Female: ["public/images/female/002-angel.png",
