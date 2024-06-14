@@ -4,10 +4,11 @@
   "description": "A Twitter Clone Project assigned through the Lighthouse Labs Web Development Bootcamp",
   "main": "server/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server/index.js",
-    "build": "node server/index.js",
-    "local": "./node_modules/.bin/nodemon --watch server -e js server/index.js"
+    "dev": "nodemon server/index.js",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "author": "Kyle Forsyth",
   "license": "ISC",
